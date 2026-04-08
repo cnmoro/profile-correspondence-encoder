@@ -1,0 +1,4 @@
+/.pytest_cache
+/base.md
+/dist
+*__pycache__*

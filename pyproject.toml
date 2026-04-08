@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "profile-correspondence-encoder"
+version = "0.1.0"
+description = "Scikit-learn compatible Profile Correspondence Encoder for high-cardinality categorical features"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "Moro" }
+]
+keywords = ["encoding", "categorical", "scikit-learn", "feature-engineering", "mca"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Developers",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+dependencies = [
+  "numpy>=1.22",
+  "pandas>=1.5",
+  "scipy>=1.8",
+  "scikit-learn>=1.2"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0",
+  "build>=1.2.0",
+  "twine>=5.0.0"
+]
+
+[project.urls]
+Homepage = "https://pypi.org/project/profile-correspondence-encoder/"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/profile_correspondence_encoder"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-q"
+testpaths = ["tests"]
